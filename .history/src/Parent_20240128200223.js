@@ -1,0 +1,25 @@
+import React, { useState } from "react";
+import Child from "./Child";
+import axios from "axios";
+
+const Parent = () => {
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  // Assume this function gets the new data from somewhere
+  const updateData = () => {
+    const newData = "Hello, world!";
+    setInputValue(newData);
+  };
+
+  return (
+    <form>
+      <Input inputValue={inputValue} onInputChange={handleInputChange} />
+      <button onClick={updateData}>Update Data</button>
+    </form>
+  );
+};
+export default Parent;
