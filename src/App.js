@@ -24,6 +24,7 @@ function App() {
               ? { ...prevItem, count: prevItem.count }
               : prevItem;
           }
+          setSubTotal(parseFloat(item.mrp_price) + subTotal);
           return prevItem.key === item.key
             ? {
                 ...prevItem,
