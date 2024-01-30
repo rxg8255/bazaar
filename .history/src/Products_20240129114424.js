@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Table, Button } from "antd";
-import { PlusCircleFilled } from "@ant-design/icons";
+import { PlusSquareFilled } from "@ant-design/icons";
 
 function Product(props) {
   const columns = [
@@ -30,7 +30,7 @@ function Product(props) {
       key: "action",
       render: (text, record, index) => (
         <Button onClick={() => handleButtonClick(record)}>
-          Add <PlusCircleFilled />
+          Add <PlusSquareFilled />
         </Button>
       ),
     },

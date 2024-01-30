@@ -1,6 +1,5 @@
-import React from "react";
-import { Table } from "antd";
-import Receipt from "./Receipt";
+import React, { useState, useEffect } from "react";
+import { Table, Button } from "antd";
 
 function Cart({ cartListData, subTotal }) {
   const columns = [
@@ -42,16 +41,21 @@ function Cart({ cartListData, subTotal }) {
     },
   ];
 
+  // const [cartState, setCartState] = useState(cartListData);
+  // useEffect(() => {
+  //   console.log("Cart state changed");
+  //   setCartState(cartListData);
+  // }, [cartListData]);
+
+  const checkOut = (item) => {};
+
   return (
     <div>
-      <Table
-        columns={columns}
-        dataSource={cartListData}
-        size="small"
-        pagination={false}
-      />
+      <Table columns={columns} dataSource={cartListData} size="small" />
       <h3>Sub Total: {subTotal}</h3>
-      <Receipt cartData={cartListData} subTotal={subTotal} />
+      <Button type="primary" onClick={() => checkOut(1)}>
+        Checkout
+      </Button>
     </div>
   );
 }

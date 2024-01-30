@@ -3,6 +3,7 @@ import "./App.css";
 import Product from "./Products";
 import { Row, Col, Divider } from "antd";
 import React, { useState } from "react";
+import Parent from "./Parent";
 
 function App() {
   const [items, setItems] = useState([]);

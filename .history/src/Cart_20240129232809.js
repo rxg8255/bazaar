@@ -1,5 +1,5 @@
 import React from "react";
-import { Table } from "antd";
+import { Table, Button } from "antd";
 import Receipt from "./Receipt";
 
 function Cart({ cartListData, subTotal }) {
@@ -44,12 +44,7 @@ function Cart({ cartListData, subTotal }) {
 
   return (
     <div>
-      <Table
-        columns={columns}
-        dataSource={cartListData}
-        size="small"
-        pagination={false}
-      />
+      <Table columns={columns} dataSource={cartListData} size="small" />
       <h3>Sub Total: {subTotal}</h3>
       <Receipt cartData={cartListData} subTotal={subTotal} />
     </div>

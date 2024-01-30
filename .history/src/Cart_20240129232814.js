@@ -1,5 +1,5 @@
 import React from "react";
-import { Table } from "antd";
+import { Table, Button } from "antd";
 import Receipt from "./Receipt";
 
 function Cart({ cartListData, subTotal }) {
